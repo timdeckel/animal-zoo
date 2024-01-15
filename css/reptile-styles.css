@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    width: 100%;
+}   
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 90vh;
+    background-color: lightblue;
+}
+
+.temp-animal-profile {
+    display: flex;
+    width: 45%;
+    height: 150px;
+    background-color: cadetblue;
+    margin: 8px;
+}
+
+.sidebar {
+    min-width: 180px;
+    width: 20%;
+    min-height: 90vh;
+    background-color: grey;
+}
