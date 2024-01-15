@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cadetblue;
+}
+.main-logo {
+  width: 40px;
+}
+.main-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0 16px;
+  background-color: #252525;
+}
+.main-navigation li {
+  text-decoration: none;
+  padding: 6px 12px;
+}
+/* 
+just for starting
+*/
