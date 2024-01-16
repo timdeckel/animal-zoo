@@ -3,27 +3,35 @@
     width: 100%;
 }   
 
+:root {
+    --aero: #2CBCDBff;
+    --cerulean: #477F95ff;
+    --sky-blue: #7FB6C3ff;
+    --pale-dogwood: #FFDDD2ff;
+    --pale-dogwood-2: #E2D0CBff;
+    --active-link-color: #e29578;
+}
+
 .main-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 85%;
     min-height: 90vh;
-    background-color: lightblue;
+    background-color: var(--active-link-color);
 }
 
 .temp-animal-profile {
     display: flex;
     width: 45%;
-    height: 150px;
-    background-color: cadetblue;
-    margin: 8px;
+    height: 200px;
+    background-color: #ffddd2;
+    margin: 16px;
 }
 
 .sidebar {
     min-width: 180px;
-    width: 20%;
     min-height: 90vh;
-    background-color: grey;
+    background-color: var(--pale-dogwood-2);
 }
