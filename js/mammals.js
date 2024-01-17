@@ -1,10 +1,7 @@
 const mammalAnimalsList = document.querySelector(".mammal-animals-list");
 const mammalsMain = document.querySelector(".mammals-main");
-// const mammalsSidebar = document.querySelector(".mammals-sidebar")s
 
-let isActive = false;
-
-// Function that prints incoming data into html elements
+// Function that render selected animal
 const displayAnimal = (pId) => {
   const selectedAnimal = animals.filter((animal) => animal.id == pId);
   selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
