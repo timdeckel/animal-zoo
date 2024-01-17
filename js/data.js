@@ -1,5 +1,17 @@
 // Animal constructor function
-function Animal(id, name, lifespan, group, food, description, length, weight, found, image) {
+function Animal(
+  id,
+  name,
+  lifespan,
+  group,
+  food,
+  description,
+  length,
+  weight,
+  found,
+  image,
+  isActive
+) {
   this.id = id;
   this.name = name;
   this.lifespan = lifespan;
@@ -10,6 +22,7 @@ function Animal(id, name, lifespan, group, food, description, length, weight, fo
   this.weight = weight;
   this.found = found;
   this.image = image;
+  this.isActive = isActive;
 }
 
 // Animal objects
@@ -23,7 +36,8 @@ const echidna = new Animal(
   "76cm",
   "10kg",
   "Throughout Australia",
-  "./img/echidna.jpeg"
+  "./img/echidna.jpeg",
+  false
 );
 
 const frillNeckedLizard = new Animal(
@@ -36,7 +50,8 @@ const frillNeckedLizard = new Animal(
   "90cm",
   "1kg",
   "Northern Australia",
-  "./img/frillNeckedLizard.jpeg"
+  "./img/frillNeckedLizard.jpeg",
+  false
 );
 
 const cassowary = new Animal(
@@ -49,7 +64,8 @@ const cassowary = new Animal(
   "1.7m",
   "44kg",
   "Queensland",
-  "./img/cassowary.webp"
+  "./img/cassowary.webp",
+  false
 );
 
 // More animals
@@ -63,7 +79,8 @@ const dolphin = new Animal(
   "3m",
   "200kg",
   "Oceans worldwide",
-  "./img/dolphin.jpeg"
+  "./img/dolphin.jpeg",
+  false
 );
 
 const giraffe = new Animal(
@@ -89,7 +106,8 @@ const eagle = new Animal(
   "2.3m",
   "6kg",
   "Found on every continent",
-  "./img/eagle.webp"
+  "./img/eagle.webp",
+  false
 );
 
 const penguin = new Animal(
@@ -102,7 +120,8 @@ const penguin = new Animal(
   "1m",
   "40kg",
   "Southern Hemisphere, especially Antarctica",
-  "./img/penguin.jpeg"
+  "./img/penguin.jpeg",
+  false
 );
 
 const snake = new Animal(
@@ -115,7 +134,8 @@ const snake = new Animal(
   "Varies",
   "Varies",
   "Found worldwide in various habitats",
-  "./img/snake.jpeg"
+  "./img/snake.jpeg",
+  false
 );
 
 const turtle = new Animal(
@@ -128,7 +148,8 @@ const turtle = new Animal(
   "Varies",
   "Varies",
   "Found in oceans, freshwater, and on land worldwide",
-  "./img/turtle.jpeg"
+  "./img/turtle.jpeg",
+  false
 );
 
 // Animals array
