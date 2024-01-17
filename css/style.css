@@ -8,6 +8,7 @@ html {
 }
 body {
   min-height: 100%;
+  color: #585858;
 }
 :root {
   --darkBrovn: #e29578; /* hover color */

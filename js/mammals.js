@@ -4,8 +4,12 @@ const mammalsMain = document.querySelector(".mammals-main");
 // Function that render selected animal
 const displayAnimal = (pId) => {
   const selectedAnimal = animals.filter((animal) => animal.id == pId);
-  selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
+  animals
+    .filter((animal) => animal.group == "mammals")
+    .filter((animal) => animal.id != pId)
+    .forEach((animal) => (animal.isActive = false));
 
+  selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
   if (!selectedAnimal[0].isActive) {
     mammalsMain.innerHTML = `
         <p class="mammals-page-message">

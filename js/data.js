@@ -93,7 +93,8 @@ const giraffe = new Animal(
   "5.5m",
   "800kg",
   "Africa, primarily in savannas and open woodlands",
-  "./img/giraffe.jpeg"
+  "./img/giraffe.jpeg",
+  false
 );
 
 const eagle = new Animal(
@@ -153,7 +154,7 @@ const turtle = new Animal(
 );
 
 // Animals array
-const animals = [
+let animals = [
   echidna,
   frillNeckedLizard,
   cassowary,

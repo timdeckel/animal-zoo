@@ -1,19 +1,23 @@
 const reptileAnimalsList = document.querySelector(".reptile-animals-list");
 const reptileMain = document.querySelector(".reptile-main");
 
-const displayAnimal  = (pId) => {
-    const selectedAnimal =  animals.filter((animal) => animal.id == pId);
-    selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
+const displayAnimal = (pId) => {
+  const selectedAnimal = animals.filter((animal) => animal.id == pId);
+  animals
+    .filter((animal) => animal.group == "reptile")
+    .filter((animal) => animal.id != pId)
+    .forEach((animal) => (animal.isActive = false));
+  selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
 
-    if (!selectedAnimal[0].isActive) {
-        reptileMain.innerHTML = `
+  if (!selectedAnimal[0].isActive) {
+    reptileMain.innerHTML = `
             <p class="reptile-page-message">
               Here you can find information about reptile. Please select the animal you want to examine
               from the menu on the left.
             </p>
             `;
-    } else {
-        reptileMain.innerHTML = `
+  } else {
+    reptileMain.innerHTML = `
             <div class="card">
             <img
                 class="card-img"
@@ -22,7 +26,7 @@ const displayAnimal  = (pId) => {
             />
             <div class="card-body">
                 <p class="animal-description"><b>Definition:</b> ${
-                selectedAnimal[0].description.length <= 200
+                  selectedAnimal[0].description.length <= 200
                     ? selectedAnimal[0].description
                     : selectedAnimal[0].description.substring(0, 200) + "..."
                 }</p>
@@ -36,21 +40,21 @@ const displayAnimal  = (pId) => {
             </div>
             </div>
         `;
-    }
+  }
 };
-    
-    const createReptilesSideBar = () => {
-      const reptileAnimal = animals.filter((animal) => animal.group == "reptile");
-    
-      reptileAnimalsList.innerHTML = reptileAnimal
-        .map((animal) => {
-          return `
+
+const createReptilesSideBar = () => {
+  const reptileAnimal = animals.filter((animal) => animal.group == "reptile");
+
+  reptileAnimalsList.innerHTML = reptileAnimal
+    .map((animal) => {
+      return `
             
               <li onclick="displayAnimal(${animal.id})" class="reptile-animal">${animal.name}</li>
             
             `;
-        })
-        .join("");
-    };
-    
-    createReptilesSideBar();
+    })
+    .join("");
+};
+
+createReptilesSideBar();
