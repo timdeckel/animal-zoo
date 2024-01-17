@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100vh;
+}
+body {
+  min-height: 100%;
+}
+:root {
+  --darkBrovn: #e29578; /* hover color */
+  --lightBrovn: #ffddd2; /* header and footer bacgroung color */
+  --light: #edf6f9; /* body backgroung color */
+  --lightBlue: #83c5be; /*  */
+  --darkBlue: #006d77; /* Text color */
+}
