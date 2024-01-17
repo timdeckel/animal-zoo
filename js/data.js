@@ -1,5 +1,6 @@
 // Animal constructor function
-function Animal(name, lifespan, group, food, description, length, weight, found, image) {
+function Animal(id, name, lifespan, group, food, description, length, weight, found, image) {
+  this.id = id;
   this.name = name;
   this.lifespan = lifespan;
   this.group = group;
@@ -13,6 +14,7 @@ function Animal(name, lifespan, group, food, description, length, weight, found,
 
 // Animal objects
 const echidna = new Animal(
+  "1",
   "Echidna",
   "50 years",
   "mammals",
@@ -25,6 +27,7 @@ const echidna = new Animal(
 );
 
 const frillNeckedLizard = new Animal(
+  "2",
   "Frill-necked Lizard",
   "20 years",
   "reptile",
@@ -37,6 +40,7 @@ const frillNeckedLizard = new Animal(
 );
 
 const cassowary = new Animal(
+  "3",
   "Cassowary",
   "20 years",
   "bird",
@@ -50,6 +54,7 @@ const cassowary = new Animal(
 
 // More animals
 const dolphin = new Animal(
+  "4",
   "Dolphin",
   "25 years",
   "mammals",
@@ -62,6 +67,7 @@ const dolphin = new Animal(
 );
 
 const giraffe = new Animal(
+  "5",
   "Giraffe",
   "25 years",
   "mammals",
@@ -74,6 +80,7 @@ const giraffe = new Animal(
 );
 
 const eagle = new Animal(
+  "6",
   "Eagle",
   "20 years",
   "birds",
@@ -86,6 +93,7 @@ const eagle = new Animal(
 );
 
 const penguin = new Animal(
+  "7",
   "Penguin",
   "20 years",
   "birds",
@@ -98,6 +106,7 @@ const penguin = new Animal(
 );
 
 const snake = new Animal(
+  "8",
   "Snake",
   "15-25 years",
   "reptile",
@@ -110,6 +119,7 @@ const snake = new Animal(
 );
 
 const turtle = new Animal(
+  "9",
   "Turtle",
   "80-150 years",
   "reptile",
