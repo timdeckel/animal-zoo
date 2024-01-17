@@ -42,6 +42,14 @@ const displayAnimal = (pId) => {
           </div>
         `;
   }
+
+  const clickedElement = document.querySelector(`.active-${pId}`);
+  const unClickElements = document.querySelectorAll(".mammal-animal");
+
+  unClickElements.forEach((element) => {
+    element.classList.remove("active-list-element");
+  });
+  clickedElement.classList.add("active-list-element");
 };
 
 const createMammalsSideBar = () => {
@@ -51,7 +59,7 @@ const createMammalsSideBar = () => {
     .map((animal) => {
       return `
         
-          <li onclick="displayAnimal(${animal.id})" class="mammal-animal">${animal.name}</li>
+          <li onclick="displayAnimal(${animal.id})" class="mammal-animal active-${animal.id}">${animal.name}</li>
         
         `;
     })

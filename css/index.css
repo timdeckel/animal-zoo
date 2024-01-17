@@ -26,7 +26,10 @@
 .main-animals-list {
   list-style: none;
 }
-
+.active-list-element {
+  background-color: var(--darkBrovn);
+  color: #fff;
+}
 .group-name {
   margin-bottom: 12px;
 }
