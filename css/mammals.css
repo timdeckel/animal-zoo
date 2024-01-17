@@ -12,9 +12,10 @@
 }
 .mammals-sidebar {
   width: calc(30% - 2%);
-  min-height: 45vh;
+  min-height: 60vh;
   padding: 12px 16px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 8px;
   margin-right: 2%;
   h4 {
     margin-bottom: 8px;
@@ -37,11 +38,12 @@
 }
 .mammals-main {
   width: 70%;
-  min-height: 45vh;
+  min-height: 60vh;
   display: flex;
   justify-content: space-between;
   align-items: start;
   padding: 16px;
+  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .card {
@@ -71,4 +73,51 @@
 .card-footer p b {
   display: inline-block;
   width: 160px;
+}
+
+/* Media Query for Tablet */
+@media only screen and (max-width: 768px) {
+  .mammals-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 16px;
+  }
+  .mammals-sidebar,
+  .mammals-main {
+    width: 100%;
+    margin-right: 0;
+    min-height: min-content;
+    margin-bottom: 16px;
+  }
+  .mammal-animals-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .mammal-animal {
+    margin-right: 12px;
+    padding: 6px 16px;
+  }
+}
+
+/* Media Query for Phone */
+@media only screen and (max-width: 480px) {
+  /* header {
+      line-height: 38px;
+      font-size: 1rem;
+    }
+    .card {
+      width: 95%;
+      margin-right: 2.5%;
+      margin-left: 2.5%;
+    }
+    .search-input {
+      width: 295px;
+    }
+    .close-modal {
+      padding: 6px 22px;
+    } */
 }

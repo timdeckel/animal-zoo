@@ -6,8 +6,10 @@ let isActive = false;
 
 // Function that prints incoming data into html elements
 const displayAnimal = (pId) => {
-  isActive = !isActive;
-  if (!isActive) {
+  const selectedAnimal = animals.filter((animal) => animal.id == pId);
+  selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
+
+  if (!selectedAnimal[0].isActive) {
     mammalsMain.innerHTML = `
         <p class="mammals-page-message">
           Here you can find information about mammals. Please select the animal you want to examine
@@ -15,8 +17,6 @@ const displayAnimal = (pId) => {
         </p>
         `;
   } else {
-    const selectedAnimal = animals.filter((animal) => animal.id == pId);
-    console.log(selectedAnimal[0].name);
     mammalsMain.innerHTML = `
           <div class="card">
             <img
@@ -34,7 +34,7 @@ const displayAnimal = (pId) => {
             <div class="card-footer">
               <p class="img-owner"><b>Lifespan:</b> ${selectedAnimal[0].lifespan}</p>
               <p class="img-owner-insta"><b>Food</b>  ${selectedAnimal[0].food}</p>
-              <p class="img-owner-total-photos"><b>Lengt: ${selectedAnimal[0].length}}</p>
+              <p class="img-owner-total-photos"><b>Lengt:</b> ${selectedAnimal[0].length}</p>
               <p class="img-info"><b>Weight: </b>  ${selectedAnimal[0].weight}</p>
               <p class="img-info"><b>Found: </b>  ${selectedAnimal[0].found}</p>
             </div>

@@ -58,6 +58,9 @@ header {
   color: #fff;
   border-radius: 6px 6px 0 0;
 }
-/* 
-just for starting
-*/
+@media only screen and (max-width: 768px) {
+  .main-nav-link {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
