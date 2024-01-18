@@ -25,11 +25,7 @@ const displayAnimal = (pId) => {
                 alt="${selectedAnimal[0].name}"
             />
             <div class="card-body">
-                <p class="animal-description"><b>Definition:</b> ${
-                  selectedAnimal[0].description.length <= 200
-                    ? selectedAnimal[0].description
-                    : selectedAnimal[0].description.substring(0, 200) + "..."
-                }</p>
+                <p class="animal-description"><b>Definition:</b> ${selectedAnimal[0].description}</p>
             </div>
             <div class="card-footer">
                 <p class="img-owner"><b>Lifespan:</b> ${selectedAnimal[0].lifespan}</p>
