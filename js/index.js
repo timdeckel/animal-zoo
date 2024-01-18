@@ -73,7 +73,24 @@ const displayAnimalDescreption = (pId) => {
         `;
   } else {
     mainAnimalMain.innerHTML = `
-              <p class="animal-description"><b>${selectedAnimal[0].name}:</b> ${selectedAnimal[0].description}</p>
+
+        <div class="main-animal-info-container">
+          <img class="main-animal-img" src="${selectedAnimal[0].image}" alt="" />
+          <div class="main-animal-info-content">
+            <p class="animal-name"><b>Name:</b> ${selectedAnimal[0].name}</p>
+            <p class="animal-desciption"><b>Description:</b> ${
+              selectedAnimal[0].description.length <= 200
+                ? selectedAnimal[0].description
+                : selectedAnimal[0].description.substring(0, 200) + "..."
+            }</p>
+            <p class="animal-food"><b>Food:</b> ${selectedAnimal[0].food}</p>
+            <a class="link-to-group" href="${getGroupLink(selectedAnimal[0].group)}">Wiev ${
+      selectedAnimal[0].group.charAt(0).toUpperCase() + selectedAnimal[0].group.slice(1)
+    }</a>
+          </div>
+        </div>
+       
+
         `;
   }
 
@@ -84,4 +101,16 @@ const displayAnimalDescreption = (pId) => {
     element.classList.remove("active-list-element");
   });
   clickedElement.classList.add("active-list-element");
+};
+
+const getGroupLink = (pAnimalGroup) => {
+  if (pAnimalGroup == "mammals") {
+    return "mammals.html";
+  }
+  if (pAnimalGroup == "reptile") {
+    return "reptiles.html";
+  }
+  if (pAnimalGroup == "birds") {
+    return "birds.html";
+  }
 };
