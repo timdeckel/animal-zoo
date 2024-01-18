@@ -67,8 +67,8 @@ const displayAnimalDescreption = (pId) => {
   selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
   if (!selectedAnimal[0].isActive) {
     mainAnimalMain.innerHTML = `
-        <p class="mammals-page-message">
-          Here you can find information about animals. 
+        <p class="main-page-message">
+          Here you can find information about animals. Just click on the animal you want to get information about.
         </p>
         `;
   } else {

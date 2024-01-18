@@ -42,11 +42,6 @@
   list-style-type: none;
   transition: all 0.4s ease;
 }
-/* .main-animal:hover {
-  background-color: #e29578;
-  cursor: pointer;
-  color: #fff;
-} */
 .main-animal:hover {
   cursor: pointer;
   color: #fff;
@@ -56,19 +51,24 @@
   width: 70%;
   min-height: 60vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   padding: 16px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-
+.main-page-message {
+  font-size: 1.5rem;
+  border: 1px solid var(--lightBrovn);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--darkBrovn);
+}
 .main-animal-info-container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  max-width: 400px;
   border-radius: 12px;
   padding: 8px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;

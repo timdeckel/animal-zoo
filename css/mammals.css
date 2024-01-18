@@ -39,7 +39,7 @@
   width: 70%;
   min-height: 60vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   padding: 16px;
   border-radius: 8px;
@@ -51,6 +51,10 @@
 }
 .mammals-page-message {
   font-size: 1.5rem;
+  border: 1px solid var(--lightBrovn);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--darkBrovn);
 }
 .card {
   margin-left: 0.5%;
