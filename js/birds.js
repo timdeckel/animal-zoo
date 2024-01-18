@@ -1,4 +1,4 @@
-const birdAnimalsList = document.querySelector("birds-list");
+const birdAnimalsList = document.querySelector(".birds-list");
 const birdsMain = document.querySelector(".birds-main");
 
 let isActive = false;
@@ -42,17 +42,17 @@ const displayAnimal = (pId) => {
 };
 
 const createBirdsSideBar = () => {
-  const mammalAnimal = animals.filter((animal) => animal.group == "mammals");
+  const birdsAnimal = animals.filter((animal) => animal.group == "birds");
 
-  mammalAnimalsList.innerHTML = mammalAnimal
+  birdAnimalsList.innerHTML = birdsAnimal
     .map((animal) => {
       return `
         
-          <li onclick="displayAnimal(${animal.id})" class="mammal-animal">${animal.name}</li>
+          <li onclick="displayAnimal(${animal.id})" class="birds-animal-li">${animal.name}</li>
         
         `;
     })
     .join("");
 };
 
-createMammalsSideBar();
+createBirdsSideBar();
