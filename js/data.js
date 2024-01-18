@@ -153,7 +153,134 @@ const turtle = new Animal(
   false
 );
 
-// Animals array
+// More animals
+const kangaroo = new Animal(
+  "10",
+  "Kangaroo",
+  "6-8 years",
+  "mammals",
+  "Grasses, leaves, and shrubs",
+  "Kangaroos are marsupials known for their powerful hind legs and distinctive hopping movement. They are herbivores that graze on a variety of vegetation, and some species can cover large distances with their powerful leaps.",
+  "1.8m",
+  "70kg",
+  "Australia",
+  "./img/kangaroo.webp",
+  false
+);
+
+const koala = new Animal(
+  "11",
+  "Koala",
+  "13-18 years",
+  "mammals",
+  "Eucalyptus leaves",
+  "Koalas are arboreal marsupials known for their cuddly appearance. They primarily feed on eucalyptus leaves and spend most of their time in trees. Koalas are native to Australia and are often associated with their unique vocalizations.",
+  "60cm",
+  "14kg",
+  "Eastern Australia",
+  "./img/koala.webp",
+  false
+);
+
+const lion = new Animal(
+  "12",
+  "Lion",
+  "10-14 years",
+  "mammals",
+  "Wild herbivores and occasionally carrion",
+  "Lions are majestic big cats known for their social structure and impressive manes in males. They are apex predators in their habitats, living in prides and coordinating their hunting efforts. Lions are found in various parts of Africa and a small population in India.",
+  "2.1m",
+  "190kg",
+  "Sub-Saharan Africa and a small population in India",
+  "./img/lion.jpeg",
+  true
+);
+
+const owl = new Animal(
+  "13",
+  "Owl",
+  "5-20 years",
+  "birds",
+  "Small mammals, birds, and insects",
+  "Owls are nocturnal birds of prey known for their silent flight and excellent night vision. They have specialized feathers for silent flight and powerful talons for catching prey. Owls are found on every continent except Antarctica.",
+  "Varies",
+  "Varies",
+  "Worldwide, except Antarctica",
+  "./img/owl.jpeg",
+  false
+);
+
+const flamingo = new Animal(
+  "14",
+  "Flamingo",
+  "20-30 years",
+  "birds",
+  "Crustaceans, algae, and small fish",
+  "Flamingos are wading birds known for their vibrant pink plumage and distinctive long legs and necks. They live in large colonies in wetland areas and are filter feeders, using their specialized bills to extract small organisms from the water.",
+  "Varies",
+  "Varies",
+  "Africa, Asia, Americas, and Europe",
+  "./img/flamingo.webp",
+  false
+);
+
+const peregrineFalcon = new Animal(
+  "15",
+  "Peregrine Falcon",
+  "8-15 years",
+  "birds",
+  "Other birds captured mid-flight",
+  "The peregrine falcon is a powerful bird of prey known for its incredible speed during hunting dives. It is one of the fastest animals in the world. Peregrine falcons have adapted to urban environments, nesting on tall buildings and cliffs.",
+  "Varies",
+  "Varies",
+  "Worldwide, except extreme polar regions",
+  "./img/peregrineFalcon.webp",
+  false
+);
+
+const gecko = new Animal(
+  "16",
+  "Gecko",
+  "5-20 years",
+  "reptile",
+  "Insects and small invertebrates",
+  "Geckos are small lizards known for their ability to climb smooth surfaces, thanks to specialized toe pads with microscopic hairs. They are found in warm climates worldwide and exhibit a variety of colors and patterns.",
+  "Varies",
+  "Varies",
+  "Tropical and subtropical regions",
+  "./img/gecko.webp",
+  false
+);
+
+const iguana = new Animal(
+  "17",
+  "Iguana",
+  "8-20 years",
+  "reptile",
+  "Vegetation, fruits, and flowers",
+  "Iguanas are large, herbivorous lizards known for their impressive size and colorful appearance. They are often found in tropical and subtropical regions, and some species can swim in water. Iguanas play a crucial role in their ecosystems by controlling vegetation.",
+  "Varies",
+  "Varies",
+  "Central and South America, and some islands",
+  "./img/iguana.jpeg",
+  false
+);
+
+const tortoise = new Animal(
+  "18",
+  "Tortoise",
+  "80-150 years",
+  "reptile",
+  "Vegetation and some invertebrates",
+  "Tortoises are land-dwelling reptiles with a large, dome-shaped shell that protects them from predators. They are known for their slow movement and long lifespan. Tortoises are found in various habitats, from deserts to grasslands.",
+  "Varies",
+  "Varies",
+  "Found worldwide in different habitats",
+  "./img/tortoise.jpeg",
+  false
+);
+
+// Updated animals array
 let animals = [
   echidna,
   frillNeckedLizard,
@@ -164,16 +291,13 @@ let animals = [
   penguin,
   snake,
   turtle,
+  kangaroo,
+  koala,
+  lion,
+  owl,
+  flamingo,
+  peregrineFalcon,
+  gecko,
+  iguana,
+  tortoise,
 ];
-
-// Test: Log the animals array
-console.log(animals);
-
-// image test codu
-// document.querySelector(".test").innerHTML = animals
-//   .map((animal) => {
-//     return `
-//     <img src="${animal.image}" alt="${animal.name}">
-//     `;
-//   })
-//   .join("");
