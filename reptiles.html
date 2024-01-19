@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reptiles.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Reptiles</title>
   </head>
   <body>
@@ -23,22 +24,42 @@
         </nav>
       </div>
     </header>
-    <h1>Reptiles Page</h1>
+
+    <!-- Here is reptile page main content -->
+    <h1 class="reptile-h1">Welcome to the world of reptiles</h1>
+    <section class="reptile-container">
+      <aside class="reptile-sidebar">
+        <h3>Reptile Animals</h3>
+        <ul class="reptile-animals-list">
+          <li class="reptile-animal"></li>
+        </ul>
+      </aside>
+      <main class="reptile-main">
+        <p class="reptile-page-message">
+          Here you can find information about reptiles. Please select the animal you want to examine
+          from the menu on the left.
+        </p>
+      </main>
+    </section>
 
     <footer class="footer-main">
-      <li class="contact">Contact us!</li>
-      <li class="About">About us</li>
-      <li class="Location">Location</li>
-      <li class="Information">Information</li>
-      <div class="social-links">
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-        <a href="https://twitter.com/" target="_blank">Twitter</a>
+      <div class="footer-top-content">
+        <ul class="contact-link">
+          <li class="contact">Contact us!</li>
+          <li class="About">About us</li>
+          <li class="Location">Location</li>
+          <li class="Information">Information</li>
+        </ul>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+          <a href="https://twitter.com/" target="_blank">Twitter</a>
+        </div>
       </div>
       <span class="copyright">&copy; 2024 Dear Friends Company</span>
     </footer>
-
     <script src="./js/data.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/reptiles.js"></script>
   </body>
 </html>

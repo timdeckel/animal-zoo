@@ -1,14 +1,15 @@
 const mammalAnimalsList = document.querySelector(".mammal-animals-list");
 const mammalsMain = document.querySelector(".mammals-main");
-// const mammalsSidebar = document.querySelector(".mammals-sidebar")s
 
-let isActive = false;
-
-// Function that prints incoming data into html elements
+// Function that render selected animal
 const displayAnimal = (pId) => {
   const selectedAnimal = animals.filter((animal) => animal.id == pId);
-  selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
+  animals
+    .filter((animal) => animal.group == "mammals")
+    .filter((animal) => animal.id != pId)
+    .forEach((animal) => (animal.isActive = false));
 
+  selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
   if (!selectedAnimal[0].isActive) {
     mammalsMain.innerHTML = `
         <p class="mammals-page-message">
@@ -25,11 +26,7 @@ const displayAnimal = (pId) => {
               alt="${selectedAnimal[0].name}"
             />
             <div class="card-body">
-              <p class="animal-description"><b>Definition:</b> ${
-                selectedAnimal[0].description.length <= 200
-                  ? selectedAnimal[0].description
-                  : selectedAnimal[0].description.substring(0, 200) + "..."
-              }</p>
+              <p class="animal-description"><b>Definition:</b> ${selectedAnimal[0].description}</p>
             </div>
             <div class="card-footer">
               <p class="img-owner"><b>Lifespan:</b> ${selectedAnimal[0].lifespan}</p>
@@ -41,6 +38,14 @@ const displayAnimal = (pId) => {
           </div>
         `;
   }
+
+  const clickedElement = document.querySelector(`.active-${pId}`);
+  const unClickElements = document.querySelectorAll(".mammal-animal");
+
+  unClickElements.forEach((element) => {
+    element.classList.remove("active-list-element");
+  });
+  clickedElement.classList.add("active-list-element");
 };
 
 const createMammalsSideBar = () => {
@@ -50,7 +55,7 @@ const createMammalsSideBar = () => {
     .map((animal) => {
       return `
         
-          <li onclick="displayAnimal(${animal.id})" class="mammal-animal">${animal.name}</li>
+          <li onclick="displayAnimal(${animal.id})" class="mammal-animal active-${animal.id}">${animal.name}</li>
         
         `;
     })

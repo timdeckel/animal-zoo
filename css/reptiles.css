@@ -1,16 +1,16 @@
-.mammals-h1 {
+.reptile-h1 {
   text-align: center;
   padding: 0 24px;
   margin-top: 20px;
   color: var(--darkBlue);
 }
-.mammals-container {
+.reptile-container {
   display: flex;
   justify-content: space-between;
   align-items: start;
   padding: 16px;
 }
-.mammals-sidebar {
+.reptile-sidebar {
   width: calc(30% - 2%);
   min-height: 60vh;
   padding: 12px 16px;
@@ -21,21 +21,21 @@
     margin-bottom: 12px;
   }
 }
-.mammal-animals-list {
+.reptile-animals-list {
   list-style: none;
 }
-.mammal-animal {
+.reptile-animal {
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   padding: 8px;
   margin-bottom: 6px;
 }
-.mammal-animal:hover {
+.reptile-animal:hover {
   cursor: pointer;
   color: #fff;
   background-color: var(--darkBrovn);
 }
-.mammals-main {
+.reptile-main {
   width: 70%;
   min-height: 60vh;
   display: flex;
@@ -49,7 +49,7 @@
   background-color: var(--darkBrovn);
   color: #fff;
 }
-.mammals-page-message {
+.reptile-page-message {
   font-size: 1.5rem;
   border: 1px solid var(--lightBrovn);
   border-radius: 8px;
@@ -88,7 +88,7 @@
 
 /* Media Query for Tablet */
 @media only screen and (max-width: 768px) {
-  .mammals-container {
+  .reptile-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -96,23 +96,23 @@
     padding: 16px;
     min-height: 58vh;
   }
-  .mammals-sidebar,
-  .mammals-main {
+  .reptile-sidebar,
+  .reptile-main {
     width: 100%;
     margin-right: 0;
     min-height: min-content;
     margin-bottom: 16px;
   }
-  .mammals-sidebar h3 {
+  .reptile-sidebar h3 {
     text-align: center;
   }
-  .mammal-animals-list {
+  .reptile-animals-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
-  .mammal-animal {
+  .reptile-animal {
     margin-right: 12px;
     padding: 6px 16px;
   }
