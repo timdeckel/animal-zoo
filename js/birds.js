@@ -1,4 +1,4 @@
-const birdAnimalsList = document.querySelector("birds-list");
+const birdAnimalsList = document.querySelector(".birds-list");
 const birdsMain = document.querySelector(".birds-main");
 
 let isActive = false;
