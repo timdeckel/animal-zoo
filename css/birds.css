@@ -25,7 +25,7 @@
   }
 }
 
-.bird-list {
+.birds-list {
     list-style: none;
 }
 
@@ -36,7 +36,7 @@
     margin-bottom: 6px;
 }
 
-.birds-list:hover{
+.birds-animal-li:hover{
     cursor: pointer;
     color: #fff;
     background-color: var(--darkBrovn);
@@ -52,6 +52,14 @@
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+
+.birds-message {
+    font-size: 1.5rem;
+    border: 1px solid var(--lightBrovn);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--darkBrovn);
+  }
 
 .birds-animal-1 {
     list-style: none;
