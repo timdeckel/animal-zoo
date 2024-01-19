@@ -1,4 +1,4 @@
-const birdAnimalsList = document.querySelector("birds-list");
+const birdAnimalsList = document.querySelector(".birds-list");
 const birdsMain = document.querySelector(".birds-main");
 
 let isActive = false;
@@ -6,12 +6,16 @@ let isActive = false;
 // Function that prints incoming data into html elements
 const displayAnimal = (pId) => {
   const selectedAnimal = animals.filter((animal) => animal.id == pId);
+  animals
+    .filter((animal) => animal.group == "birds")
+    .filter((animal) => animal.id != pId)
+    .forEach((animal) => (animal.isActive = false));
   selectedAnimal[0].isActive = !selectedAnimal[0].isActive;
 
   if (!selectedAnimal[0].isActive) {
     birdsMain.innerHTML = `
         <p class="birds-page-message">
-          Here you can find information about birds!
+        Here you can find information about birds. Please select the animal you want to examine from the menu on the left.
         </p>
         `;
   } else {
@@ -39,20 +43,27 @@ const displayAnimal = (pId) => {
           </div>
         `;
   }
+  const clickedElement = document.querySelector(`.active-${pId}`);
+  const unClickElements = document.querySelectorAll(".birds-animal-li");
+
+  unClickElements.forEach((element) => {
+    element.classList.remove("active-list-element");
+  });
+  clickedElement.classList.add("active-list-element");
 };
 
 const createBirdsSideBar = () => {
-  const mammalAnimal = animals.filter((animal) => animal.group == "mammals");
-
-  mammalAnimalsList.innerHTML = mammalAnimal
+  const birdsAnimal = animals.filter((animal) => animal.group == "birds");
+  console.log(birdAnimalsList);
+  birdAnimalsList.innerHTML = birdsAnimal
     .map((animal) => {
       return `
         
-          <li onclick="displayAnimal(${animal.id})" class="mammal-animal">${animal.name}</li>
+          <li onclick="displayAnimal(${animal.id})" class="birds-animal-li active-${animal.id}">${animal.name}</li>
         
         `;
     })
     .join("");
 };
 
-createMammalsSideBar();
+createBirdsSideBar();

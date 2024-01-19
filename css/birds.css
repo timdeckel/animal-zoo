@@ -1,91 +1,125 @@
 .birds-header {
-    text-align: center;
-    padding: 0 24px;
-    margin-top: 20px;
-    color: var(--darkBlue);
+  text-align: center;
+  padding: 0 24px;
+  margin-top: 20px;
+  color: var(--darkBlue);
 }
 
 .birds-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 16px;
 }
 
 .birds-sidebar {
-    width: calc(30% - 2%);
-    min-height: 60vh;
-    padding: 12px 16px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    border-radius: 8px;
-    margin-right: 2%;
-    h4 {
-        margin-bottom: 8px;
-        text-align: center;
+  width: calc(30% - 2%);
+  min-height: 60vh;
+  padding: 12px 16px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 8px;
+  margin-right: 2%;
+  h3 {
+    margin-bottom: 8px;
   }
 }
 
-.bird-list {
-    list-style: none;
+.birds-list {
+  list-style: none;
 }
 
 .birds-animal-li {
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    padding: 8px;
-    margin-bottom: 6px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 8px;
+  margin-bottom: 6px;
 }
 
-.birds-list:hover{
-    cursor: pointer;
-    color: #fff;
-    background-color: var(--darkBrovn);
+.birds-animal-li:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--darkBrovn);
 }
 
 .birds-main {
-    width: 70%;
-    min-height: 60vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  width: 70%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.active-list-element {
+  background-color: var(--darkBrovn);
+  color: #fff;
+}
+.birds-page-message {
+  font-size: 1.5rem;
+  border: 1px solid var(--lightBrovn);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--darkBrovn);
 }
 
+.card {
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px 12px 0 0;
+}
+.card-body {
+  padding: 12px;
+  min-height: 90px;
+}
+.card-footer {
+  border-top: 1px solid #d1d0d0;
+  padding: 12px;
+  font-size: 0.8rem;
+}
+.card-footer p {
+  margin-bottom: 6px;
+}
+.card-footer p b {
+  display: inline-block;
+  width: 160px;
+}
 @media screen and (max-width: 768px) {
-    .birds-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        padding: 16px;
-    }
+  .birds-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 16px;
+  }
 
-    .birds-sidebar,
-    .birds-main {
-        width: 100%;
-        margin-right: 0;
-        min-height: min-content;
-        margin-bottom: 16px;
-    }
+  .birds-sidebar,
+  .birds-main {
+    width: 100%;
+    margin-right: 0;
+    min-height: min-content;
+    margin-bottom: 16px;
+  }
 
-    .bird-list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
+  .bird-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .birds-animal-li {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
-
-   
-
-
-
+  .birds-animal-li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
